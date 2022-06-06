@@ -1,1 +1,2 @@
+str = input("Enter formula>")
 
