@@ -1,17 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-def formulaSplit(val):
-    return val.split('+')
+import calcFunc as cf
+import re
 
-def addition(vals):
-    total = 0
-    for val in vals:
-        total = total + int(val)
+def chkOperator(val):
+    if val in ['+','-','*','/']:
+        return True
+    else:
+        return False
 
-    return total
-
+data = cf.calcFunc()
+print(chkOperator('+'))
 
 str = input("Enter formula>")
-print(addition(formulaSplit(str)))
+
+numList = []
+numList = re.split('\+|\-|\*|\/', str)
+
+print(opeList)
+print(numList)
+
+print(data.addition(10))
+print(data.addition(10))
 
 
