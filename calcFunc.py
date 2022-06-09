@@ -6,7 +6,7 @@ class calcFunc():
         self.total = 0
 
     def addition(self,val):
-        self.total = self.total + val
+        self.total = self.total + int(val)
         return self.total
     def subtraction(self,val):
         self.total = self.total - val

@@ -3,24 +3,38 @@
 import calcFunc as cf
 import re
 
-def chkOperator(val):
-    if val in ['+','-','*','/']:
-        return True
-    else:
-        return False
-
 data = cf.calcFunc()
-print(chkOperator('+'))
-
 str = input("Enter formula>")
 
 numList = []
 numList = re.split('\+|\-|\*|\/', str)
 
-print(opeList)
-print(numList)
+stackNum = re.split('[1-9]', str)
+stackOpe = list(filter(None, stackNum))
 
-print(data.addition(10))
-print(data.addition(10))
+num = 0
+ope = ''
+
+num = numList.pop()
+
+for i,item in enumerate(numList):
+    print(item)
+    data.addition(item)
+    if len(stackOpe) > 0:
+        ope = stackOpe.pop()
+        print(ope)
+#    if i == 0:
+#        num = int(numList.pop())
+#        data.addition(num)
+#    else:
+
+
+#    num = int(numList.pop())
+#    ope = stackOpe.pop()
+#    print(item)
+#
+#    if ope == '+':
+#        data.addition(num)
+
 
 
