@@ -30,24 +30,8 @@ for i,item in enumerate(numList):
             data.multiplication(item)
         elif ope == '/':
             data.division(item)
+
 print(data.total)
-#    print(item)
-#    data.addition(item)
-#    if len(stackOpe) > 0:
-#        ope = stackOpe.pop()
-#        print(ope)
-#    if i == 0:
-#        num = int(numList.pop())
-#        data.addition(num)
-#    else:
-
-
-#    num = int(numList.pop())
-#    ope = stackOpe.pop()
-#    print(item)
-#
-#    if ope == '+':
-#        data.addition(num)
 
 
 
