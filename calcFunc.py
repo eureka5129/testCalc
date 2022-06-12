@@ -9,11 +9,11 @@ class calcFunc():
         self.total = self.total + int(val)
         return self.total
     def subtraction(self,val):
-        self.total = self.total - val
+        self.total = self.total - int(val)
         return self.total
     def multiplication(self,val):
-        self.total = self.total * val
+        self.total = self.total * int(val)
         return self.total
     def division(self,val):
-        self.total = self.total / val
+        self.total = self.total / int(val)
         return self.total

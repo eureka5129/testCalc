@@ -9,20 +9,33 @@ str = input("Enter formula>")
 numList = []
 numList = re.split('\+|\-|\*|\/', str)
 
-stackNum = re.split('[1-9]', str)
-stackOpe = list(filter(None, stackNum))
+opeList = re.split('[1-9]', str)
+stackOpe = list(filter(None, opeList))
 
 num = 0
 ope = ''
 
-num = numList.pop()
-
 for i,item in enumerate(numList):
-    print(item)
-    data.addition(item)
-    if len(stackOpe) > 0:
+    if len(stackOpe) != 0:
         ope = stackOpe.pop()
-        print(ope)
+
+    if i == 0:
+        data.addition(item)
+    else:
+        if ope == '+':
+            data.addition(item)
+        elif ope == '-':
+            data.subtraction(item)
+        elif ope == '*':
+            data.multiplication(item)
+        elif ope == '/':
+            data.division(item)
+print(data.total)
+#    print(item)
+#    data.addition(item)
+#    if len(stackOpe) > 0:
+#        ope = stackOpe.pop()
+#        print(ope)
 #    if i == 0:
 #        num = int(numList.pop())
 #        data.addition(num)
