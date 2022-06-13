@@ -9,11 +9,12 @@ str = input("Enter formula>")
 numList = []
 numList = re.split('\+|\-|\*|\/', str)
 
-opeList = re.split('[1-9]', str)
+opeList = re.split('[0-9]{0,}', str)
 stackOpe = list(filter(None, opeList))
 
 num = 0
 ope = ''
+
 
 for i,item in enumerate(numList):
     if len(stackOpe) != 0:
